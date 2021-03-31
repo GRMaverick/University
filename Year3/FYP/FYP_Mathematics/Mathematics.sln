@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MathematicsLib", "MathematicsLib\MathematicsLib.vcxproj", "{41BB6204-9236-478B-810E-D9F6D378B475}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MathematicsLib_UnitTests", "MathematicsLib_UnitTests\MathematicsLib_UnitTests.vcxproj", "{8FBDAB1D-3C70-4218-B270-EACCBDD572A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41BB6204-9236-478B-810E-D9F6D378B475}.Debug|ARM.ActiveCfg = Debug|Win32
+		{41BB6204-9236-478B-810E-D9F6D378B475}.Debug|x64.ActiveCfg = Debug|x64
+		{41BB6204-9236-478B-810E-D9F6D378B475}.Debug|x64.Build.0 = Debug|x64
+		{41BB6204-9236-478B-810E-D9F6D378B475}.Debug|x86.ActiveCfg = Debug|Win32
+		{41BB6204-9236-478B-810E-D9F6D378B475}.Debug|x86.Build.0 = Debug|Win32
+		{41BB6204-9236-478B-810E-D9F6D378B475}.Release|ARM.ActiveCfg = Release|Win32
+		{41BB6204-9236-478B-810E-D9F6D378B475}.Release|x64.ActiveCfg = Release|x64
+		{41BB6204-9236-478B-810E-D9F6D378B475}.Release|x64.Build.0 = Release|x64
+		{41BB6204-9236-478B-810E-D9F6D378B475}.Release|x86.ActiveCfg = Release|Win32
+		{41BB6204-9236-478B-810E-D9F6D378B475}.Release|x86.Build.0 = Release|Win32
+		{8FBDAB1D-3C70-4218-B270-EACCBDD572A0}.Debug|ARM.ActiveCfg = Debug|Win32
+		{8FBDAB1D-3C70-4218-B270-EACCBDD572A0}.Debug|x64.ActiveCfg = Debug|x64
+		{8FBDAB1D-3C70-4218-B270-EACCBDD572A0}.Debug|x64.Build.0 = Debug|x64
+		{8FBDAB1D-3C70-4218-B270-EACCBDD572A0}.Debug|x86.ActiveCfg = Debug|Win32
+		{8FBDAB1D-3C70-4218-B270-EACCBDD572A0}.Debug|x86.Build.0 = Debug|Win32
+		{8FBDAB1D-3C70-4218-B270-EACCBDD572A0}.Release|ARM.ActiveCfg = Release|Win32
+		{8FBDAB1D-3C70-4218-B270-EACCBDD572A0}.Release|x64.ActiveCfg = Release|x64
+		{8FBDAB1D-3C70-4218-B270-EACCBDD572A0}.Release|x64.Build.0 = Release|x64
+		{8FBDAB1D-3C70-4218-B270-EACCBDD572A0}.Release|x86.ActiveCfg = Release|Win32
+		{8FBDAB1D-3C70-4218-B270-EACCBDD572A0}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A2678F1-A043-4C98-B41F-F053A117A8B3}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://grmaverick.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MathematicsLib\\MathematicsLib.vcxproj
+		SccProjectName1 = MathematicsLib
+		SccLocalPath1 = MathematicsLib
+		SccProjectUniqueName2 = MathematicsLib_UnitTests\\MathematicsLib_UnitTests.vcxproj
+		SccProjectName2 = MathematicsLib_UnitTests
+		SccLocalPath2 = MathematicsLib_UnitTests
+	EndGlobalSection
+EndGlobal

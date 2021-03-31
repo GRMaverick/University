@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3dc18d68-0af7-4c18-8a03-d073ec772880}</ProjectGuid>
+    <Keyword>DirectXApp</Keyword>
+    <RootNamespace>BallisticsFYP</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <ApplicationType>Windows Store</ApplicationType>
+    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
+    <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <OutputPath>bin\$(Configuration)\$(Platform)</OutputPath>
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <OutputPath>bin\$(Configuration)\$(Platform)</OutputPath>
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ImageContentTask.props" />
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\MeshContentTask.props" />
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ShaderGraphContentTask.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Properties\BallisticsDebug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Properties\BallisticsRelease.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Properties\BallisticsDebug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Properties\BallisticsRelease.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <PackageCertificateKeyFile>BallisticsFYP_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Link>
+      <AdditionalDependencies>d2d1.lib; d3d11.lib; dxgi.lib; windowscodecs.lib; dwrite.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store; $(VCInstallDir)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Link>
+      <AdditionalDependencies>d2d1.lib; d3d11.lib; dxgi.lib; windowscodecs.lib; dwrite.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store; $(VCInstallDir)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>d2d1.lib; d3d11.lib; dxgi.lib; windowscodecs.lib; dwrite.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store\amd64; $(VCInstallDir)\lib\amd64</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalDependencies>d2d1.lib; d3d11.lib; dxgi.lib; windowscodecs.lib; dwrite.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store\amd64; $(VCInstallDir)\lib\amd64</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="Assets\LockScreenLogo.scale-200.png" />
+    <Image Include="Assets\SplashScreen.scale-200.png" />
+    <Image Include="Assets\Square150x150Logo.scale-200.png" />
+    <Image Include="Assets\Square44x44Logo.scale-200.png" />
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Image Include="Assets\StoreLogo.png" />
+    <Image Include="Assets\Textures\bump01.dds" />
+    <Image Include="Assets\Textures\bump02.dds" />
+    <Image Include="Assets\Textures\floor.dds" />
+    <Image Include="Assets\Textures\G36C_D.dds" />
+    <Image Include="Assets\Textures\Hercules_COLOR.dds" />
+    <Image Include="Assets\Textures\M200SR\Textures\1\M200SR_1.dds" />
+    <Image Include="Assets\Textures\spec0.dds" />
+    <Image Include="Assets\Textures\spec02.dds" />
+    <Image Include="Assets\Textures\stone.dds" />
+    <Image Include="Assets\Textures\stone01.dds" />
+    <Image Include="Assets\Textures\stone02.dds" />
+    <Image Include="Assets\Textures\Target.dds" />
+    <Image Include="Assets\Textures\Targets.dds" />
+    <Image Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.h" />
+    <ClInclude Include="BallisticsSceneRenderer.h" />
+    <ClInclude Include="Common\DeviceResources.h" />
+    <ClInclude Include="BallisticsFYPMain.h" />
+    <ClInclude Include="Common\DirectXHelper.h" />
+    <ClInclude Include="Common\StepTimer.h" />
+    <ClInclude Include="Components\CollisionComponent.h" />
+    <ClInclude Include="Components\FollowCameraComponent.h" />
+    <ClInclude Include="Components\LineRenderComponent.h" />
+    <ClInclude Include="Components\PhysicsComponent.h" />
+    <ClInclude Include="Components\ProjectileComponent.h" />
+    <ClInclude Include="Components\StaticCameraComponent.h" />
+    <ClInclude Include="Components\FPSCameraComponent.h" />
+    <ClInclude Include="Components\RenderComponent.h" />
+    <ClInclude Include="Components\TransformComponent.h" />
+    <ClInclude Include="Components\WeaponComponent.h" />
+    <ClInclude Include="Content\Sample3DSceneRenderer.h" />
+    <ClInclude Include="Content\SampleFpsTextRenderer.h" />
+    <ClInclude Include="Content\ShaderStructures.h" />
+    <ClInclude Include="Dependencies\Debug\Mathematics\inc\NarrowPhaseCollisionDetection.h" />
+    <ClInclude Include="Dependencies\Mathematics\inc\Intersections.h" />
+    <ClInclude Include="Dependencies\Mathematics\inc\Line.h" />
+    <ClInclude Include="Dependencies\Mathematics\inc\Matrix3x3.h" />
+    <ClInclude Include="Dependencies\Mathematics\inc\Quaternion.h" />
+    <ClInclude Include="Dependencies\Mathematics\inc\Vector3.h" />
+    <ClInclude Include="Dependencies\Release\Mathematics\inc\Intersections.h" />
+    <ClInclude Include="Dependencies\Release\Mathematics\inc\Line.h" />
+    <ClInclude Include="Dependencies\Release\Mathematics\inc\Matrix3x3.h" />
+    <ClInclude Include="Dependencies\Release\Mathematics\inc\NarrowPhaseCollisionDetection.h" />
+    <ClInclude Include="Dependencies\Release\Mathematics\inc\Quaternion.h" />
+    <ClInclude Include="Dependencies\Release\Mathematics\inc\stdafx.h" />
+    <ClInclude Include="Dependencies\Release\Mathematics\inc\Vector3.h" />
+    <ClInclude Include="Interfaces\ICameraComponent.h" />
+    <ClInclude Include="Interfaces\IComponent.h" />
+    <ClInclude Include="Interfaces\IMediator.h" />
+    <ClInclude Include="Interfaces\IMessage.h" />
+    <ClInclude Include="Interfaces\IProjectilePrefab.h" />
+    <ClInclude Include="Interfaces\ISystem.h" />
+    <ClInclude Include="Managers\ComponentManager.h" />
+    <ClInclude Include="Managers\EntityManager.h" />
+    <ClInclude Include="Managers\InputManager.h" />
+    <ClInclude Include="Managers\SystemsManager.h" />
+    <ClInclude Include="Managers\TimerManager.h" />
+    <ClInclude Include="Mediators\SystemsMediator.h" />
+    <ClInclude Include="Messages\ActiveCameraMessage.h" />
+    <ClInclude Include="Messages\FireProjectileMessage.h" />
+    <ClInclude Include="Messages\GetFollowTargetMessage.h" />
+    <ClInclude Include="Messages\ReloadWeaponMessage.h" />
+    <ClInclude Include="Messages\RequestActiveCamera.h" />
+    <ClInclude Include="Messages\RetractHammerMessage.h" />
+    <ClInclude Include="Messages\SetActiveCamera.h" />
+    <ClInclude Include="Messages\SetAmmunitionType.h" />
+    <ClInclude Include="Messages\UpdateFollowMessage.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Prefabricated\M43_762_39.h" />
+    <ClInclude Include="Prefabricated\NATO_127x99mm.h" />
+    <ClInclude Include="Prefabricated\NATO_556x45.h" />
+    <ClInclude Include="Prefabricated\Parabellum9x19mm.h" />
+    <ClInclude Include="Systems\CameraSystem.h" />
+    <ClInclude Include="Systems\ExternalBallisticsSystem.h" />
+    <ClInclude Include="Systems\InternalBallisticsSystem.h" />
+    <ClInclude Include="Systems\RenderSystem.h" />
+    <ClInclude Include="Systems\TerminalBallisticsSystem.h" />
+    <ClInclude Include="Utilities\DDSTextureLoader.h" />
+    <ClInclude Include="Utilities\Debugging.h" />
+    <ClInclude Include="Utilities\Delegate.h" />
+    <ClInclude Include="Utilities\DelegateFactory.h" />
+    <ClInclude Include="Utilities\GeometryGenerator.h" />
+    <ClInclude Include="Utilities\Integrators.h" />
+    <ClInclude Include="Utilities\OBJLoader.h" />
+    <ClInclude Include="Utilities\ProjectileTracking.h" />
+    <ClInclude Include="Utilities\SingleDelegate.h" />
+    <ClInclude Include="Utilities\Structs.h" />
+    <ClInclude Include="Utilities\Timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="BallisticsSceneRenderer.cpp" />
+    <ClCompile Include="Common\DeviceResources.cpp" />
+    <ClCompile Include="BallisticsFYPMain.cpp" />
+    <ClCompile Include="Components\FollowCameraComponent.cpp" />
+    <ClCompile Include="Components\LineRenderComponent.cpp" />
+    <ClCompile Include="Components\ProjectileComponent.cpp" />
+    <ClCompile Include="Components\StaticCameraComponent.cpp" />
+    <ClCompile Include="Components\FPSCameraComponent.cpp" />
+    <ClCompile Include="Components\RenderComponent.cpp" />
+    <ClCompile Include="Components\TransformComponent.cpp" />
+    <ClCompile Include="Content\SampleFpsTextRenderer.cpp" />
+    <ClCompile Include="Content\Sample3DSceneRenderer.cpp" />
+    <ClCompile Include="Managers\ComponentManager.cpp" />
+    <ClCompile Include="Managers\EntityManager.cpp" />
+    <ClCompile Include="Managers\InputManager.cpp" />
+    <ClCompile Include="Managers\SystemsManager.cpp" />
+    <ClCompile Include="Managers\TimerManager.cpp" />
+    <ClCompile Include="Mediators\SystemsMediator.cpp" />
+    <ClCompile Include="Messages\ActiveCameraMessage.cpp" />
+    <ClCompile Include="Messages\RequestActiveCamera.cpp" />
+    <ClCompile Include="Messages\SetActiveCamera.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Prefabricated\M43_762_39.cpp" />
+    <ClCompile Include="Prefabricated\NATO_127x99mm.cpp" />
+    <ClCompile Include="Prefabricated\NATO_556x45.cpp" />
+    <ClCompile Include="Prefabricated\Parabellum9x19mm.cpp" />
+    <ClCompile Include="Systems\CameraSystem.cpp" />
+    <ClCompile Include="Systems\ExternalBallisticsSystem.cpp" />
+    <ClCompile Include="Systems\InternalBallisticsSystem.cpp" />
+    <ClCompile Include="Systems\RenderSystem.cpp" />
+    <ClCompile Include="Systems\TerminalBallisticsSystem.cpp" />
+    <ClCompile Include="Utilities\DDSTextureLoader.cpp" />
+    <ClCompile Include="Utilities\GeometryGenerator.cpp" />
+    <ClCompile Include="Utilities\Integrators.cpp" />
+    <ClCompile Include="Utilities\OBJLoader.cpp" />
+    <ClCompile Include="Utilities\ProjectileTracking.cpp" />
+    <ClCompile Include="Utilities\Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Assets\OBJs\Bullet.mtl" />
+    <None Include="Properties\BallisticsDebug.props" />
+    <None Include="Properties\BallisticsRelease.props" />
+    <Text Include="Reporting\Timings\UpdateTimer_TimingInfo.csv">
+      <FileType>Document</FileType>
+    </Text>
+    <Text Include="Assets\OBJs\G36C.mtl">
+      <FileType>Document</FileType>
+    </Text>
+    <Text Include="Assets\OBJs\M200SR.mtl">
+      <FileType>Document</FileType>
+    </Text>
+    <Text Include="Assets\OBJs\M200SR_1.mtl">
+      <FileType>Document</FileType>
+    </Text>
+    <None Include="BallisticsFYP_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Content\BasicPixelShader.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Content\BasicVertexShader.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Content\LinePixelShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Content\LineVertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\OBJs\G36C.obj">
+      <FileType>Document</FileType>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\OBJs\M200SR.obj">
+      <FileType>Document</FileType>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\OBJs\M200SR_1.obj">
+      <FileType>Document</FileType>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\OBJs\Target.obj">
+      <FileType>Document</FileType>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Dependencies\Mathematics\lib\MathematicsLib.lib" />
+    <Library Include="Dependencies\Release\Mathematics\lib\MathematicsLib.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\OBJs\Bullet.obj">
+      <FileType>Document</FileType>
+    </Text>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ImageContentTask.targets" />
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\MeshContentTask.targets" />
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ShaderGraphContentTask.targets" />
+  </ImportGroup>
+</Project>

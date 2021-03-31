@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="TinyXML">
+      <UniqueIdentifier>{1d544555-3274-48e7-8786-45b7fe063987}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML Data Files">
+      <UniqueIdentifier>{b9834924-ea92-46ba-8dd5-33a1015f005b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Agents">
+      <UniqueIdentifier>{ccc6221a-56c2-410b-b66a-a395ccf72c9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AIEngine">
+      <UniqueIdentifier>{6b16adfa-e1be-4af8-b6bf-6c9f5d596261}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AIEngine\ANN">
+      <UniqueIdentifier>{4e529799-c4a9-4665-9ddc-2608183239eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AIEngine\Steering">
+      <UniqueIdentifier>{191eb989-05c8-4bba-b4e8-25c707414f85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AIEngine\GA">
+      <UniqueIdentifier>{4a53a4dd-ff2e-4a66-bd93-c41dfb890be4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Waypoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WaypointManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseTank.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C2DMatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Collisions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Commons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlledTank.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScreenLevel1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScreenManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObstacleManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PickUpManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectileManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TankManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TinyXML\tinystr.h">
+      <Filter>TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="TinyXML\tinyxml.h">
+      <Filter>TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="DumbTank.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Agents\AlphaTank.h">
+      <Filter>Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="Neuron.h">
+      <Filter>AIEngine\ANN</Filter>
+    </ClInclude>
+    <ClInclude Include="NeuronLayer.h">
+      <Filter>AIEngine\ANN</Filter>
+    </ClInclude>
+    <ClInclude Include="NeuralNetwork.h">
+      <Filter>AIEngine\ANN</Filter>
+    </ClInclude>
+    <ClInclude Include="NNParameters.h">
+      <Filter>AIEngine\ANN</Filter>
+    </ClInclude>
+    <ClInclude Include="Genome.h">
+      <Filter>AIEngine\GA</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneticAlgorithm.h">
+      <Filter>AIEngine\GA</Filter>
+    </ClInclude>
+    <ClInclude Include="SteeringEngine.h">
+      <Filter>AIEngine\Steering</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WaypointManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseTank.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Collisions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlledTank.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScreenLevel1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScreenManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObstacleManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PickUpManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectileManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TankManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Waypoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinystr.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinyxml.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinyxmlerror.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="TinyXML\tinyxmlparser.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="DumbTank.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Agents\AlphaTank.cpp">
+      <Filter>Agents</Filter>
+    </ClCompile>
+    <ClCompile Include="Neuron.cpp">
+      <Filter>AIEngine\ANN</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuronLayer.cpp">
+      <Filter>AIEngine\ANN</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNetwork.cpp">
+      <Filter>AIEngine\ANN</Filter>
+    </ClCompile>
+    <ClCompile Include="Genome.cpp">
+      <Filter>AIEngine\GA</Filter>
+    </ClCompile>
+    <ClCompile Include="NNParameter.cpp">
+      <Filter>AIEngine\ANN</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneticAlgorithm.cpp">
+      <Filter>AIEngine\GA</Filter>
+    </ClCompile>
+    <ClCompile Include="SteeringEngine.cpp">
+      <Filter>AIEngine\Steering</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="SDL\SDL2.lib" />
+    <Library Include="SDL\SDL2_image.lib" />
+    <Library Include="SDL\SDL2_mixer.lib" />
+    <Library Include="SDL\SDL2main.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="XML Data Files\GameAI.xml">
+      <Filter>XML Data Files</Filter>
+    </Xml>
+    <Xml Include="XML Data Files\GameAIOneBuilding.xml">
+      <Filter>XML Data Files</Filter>
+    </Xml>
+    <Xml Include="XML Data Files\TankData.xml">
+      <Filter>XML Data Files</Filter>
+    </Xml>
+    <Xml Include="XML Data Files\Arena.xml">
+      <Filter>XML Data Files</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="XML Data Files\LevelData.xml">
+      <Filter>XML Data Files</Filter>
+    </None>
+    <None Include="NeuralNetwork.config.ini">
+      <Filter>AIEngine\ANN</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns:atg="http://atg.xbox.com" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8e114980-c1a3-4ada-ad7c-83caadf5daeb}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{2c3d4c8c-5d1a-459a-a05a-a4e4b608a44e}</UniqueIdentifier>
+      <Extensions>fx;fxh;hlsl</Extensions>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{96947b8e-8f48-4b57-adb8-36547428141d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{52b440c7-c485-4e11-adf9-3a6a74faedd2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Structs.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DDSTextureLoader.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HMTerrain.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="OBJLoader.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Aircraft.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Loader.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Bilboard.h" />
+    <ClInclude Include="Runway.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="FogFX.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HMTerrain.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DX11 Framework.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DDSTextureLoader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="OBJLoader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Aircraft.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Loader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Bilboard.cpp" />
+    <ClCompile Include="Runway.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="FogFX.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CLInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </CLInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DX11 Framework.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Textures\CFA44Tex">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Objects\terrainmap.raw">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DX11 Framework.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="height.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Crate_COLOR.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Textures\grass.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Textures\ptree.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Textures\ground2.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

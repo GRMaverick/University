@@ -1,0 +1,8 @@
+ResolutionWidth	1920
+ResolutionHeight	1080
+MaxFrames	1
+PPMOutputPath	Output\\BackendApp\\PPM\\
+FilenameTemplate	SpheresFrame_
+Parallel	true
+Threads	2
+Physics	true
